@@ -15,12 +15,14 @@ public class User {
 	private String name;
 	private String city;
 	private String status;
-	public User(int id, String name, String city, String status) {
+	private int age;
+	public User(int id, String name, String city, String status,int age) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.city = city;
 		this.status = status;
+		this.age = age;
 	}
 	public int getId() {
 		return id;
@@ -46,13 +48,19 @@ public class User {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", city=" + city + ", status=" + status + "]";
+		return "User [id=" + id + ", name=" + name + ", city=" + city + ", status=" + status + ", age=" + age + "]";
 	}
 	
 	

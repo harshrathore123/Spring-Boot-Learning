@@ -30,6 +30,7 @@ public class BootjpaexampleApplication {
 		 */
 
 //		Step 2: Create Operation but for Multiple Object
+		
 		/*
 		 * User user2 = new User(); user2.setName("AKASH"); user2.setCity("Bhopal");
 		 * user2.setStatus("Urban");
@@ -86,7 +87,63 @@ public class BootjpaexampleApplication {
 		 * try { userRepository.deleteAll(); System.out.println("Full Data is Deleted");
 		 * } catch(Exception e) { System.out.println(e.getMessage()); }
 		 */
+		
+//		--------------------------------------------------------------------------------------------------
+//		------------------------------ DERIVED QUERY METHODS ---------------------------------------------
+		
+//		--------- Find By Name   (Name)
 
+		/*
+		 * List<User> user = userRepository.findByName("Pawan");
+		 * 
+		 * 
+		 * if(user.isEmpty()) { System.out.println("No Found!"); } else {
+		 * System.out.println(user); }
+		 */
+		
+//		---------- Find By Name And City    (AND)
+		
+		/*
+		 * List<User> user = userRepository.findByNameAndCity("Pawan", "Bhopal");
+		 * 
+		 * if(user.isEmpty()) { System.out.println("Not Found!"); } else {
+		 * System.out.println(user); }
+		 */
+		
+//		--------- Find By Name Or City      (OR)
+		
+		/*
+		 * List<User> user = userRepository.findByNameOrCity("Rahul", "Pakistan");
+		 * 
+		 * if(user.isEmpty()) { System.out.println("Not Found!"); } else {
+		 * System.out.println(user); }
+		 */
+		
+//		---------- Find By Age Greater Than   (Greater Than)
+		/*
+		 * List<User> user = userRepository.findByAgeGreaterThan(90);
+		 * 
+		 * if(user.isEmpty()) { System.out.println("Not Found"); } else {
+		 * System.out.println(user); }
+		 */
+		
+//		---------- Find By Age Less Than   (Less Than)
+		/*
+		 * List<User> user = userRepository.findByAgeLessThan(90);
+		 * 
+		 * if(user.isEmpty()) { System.out.println("Not Found"); } else {
+		 * System.out.println(user); }
+		 */
+		
+//		---------- Find By Age Between	   (Between)
+		/*
+		 * List<User> user = userRepository.findByAgeBetween(10,21);
+		 * 
+		 * if(user.isEmpty()) { System.out.println("Not Found"); } else {
+		 * System.out.println(user); }
+		 */
+		 
+		 
 	}
 
 }
