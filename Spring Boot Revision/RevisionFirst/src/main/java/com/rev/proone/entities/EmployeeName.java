@@ -19,13 +19,6 @@ public class EmployeeName {
 	@Column(name="emp_last_name")
 	private String lastName;
 	
-	public EmployeeName(int empnameId, String firstName, String lastName) {
-		super();
-		this.empnameId = empnameId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
 	public int getEmpnameId() {
 		return empnameId;
 	}

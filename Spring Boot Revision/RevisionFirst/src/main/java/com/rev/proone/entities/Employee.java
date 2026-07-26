@@ -25,25 +25,16 @@ public class Employee {
 	@JoinColumn(name="emp_name_id")
 	private EmployeeName empname;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "emp_address_id")
 	@JsonManagedReference
-	@JoinColumn(name="emp_address_id")
 	private EmployeeAddress empaddress;
 	
 	@Column(name="age")
 	private int studentAge;
 	
-	@Column(name="dob")
 	private String dob;
 
-	public Employee(int id, EmployeeName empname, EmployeeAddress empaddress, int studentAge, String dob) {
-		super();
-		this.id = id;
-		this.empname = empname;
-		this.empaddress = empaddress;
-		this.studentAge = studentAge;
-		this.dob = dob;
-	}
 
 	public int getId() {
 		return id;

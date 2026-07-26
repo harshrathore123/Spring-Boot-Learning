@@ -2,10 +2,8 @@ package com.rev.proone.entities;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,20 +26,10 @@ public class EmployeeLocation {
 	@Column(name="emp_pincode")
 	private int empPincode;
 	
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonManagedReference
-	@JoinColumn(name="emp_address_id")
+	@OneToOne(mappedBy = "employeeLocation")
+	@JoinColumn(name = "emp_address_id")
+	@JsonManagedReference("location-address")
 	private EmployeeAddress emp_address;
-
-	public EmployeeLocation(int emplocationId, String empCity, String empState, int empPincode,
-			EmployeeAddress emp_address) {
-		super();
-		this.emplocationId = emplocationId;
-		this.empCity = empCity;
-		this.empState = empState;
-		this.empPincode = empPincode;
-		this.emp_address = emp_address;
-	}
 
 	public int getEmplocationId() {
 		return emplocationId;

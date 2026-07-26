@@ -2,12 +2,14 @@ package com.rev.proone.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
 @Entity
@@ -18,28 +20,19 @@ public class EmployeeAddress {
 	private int empaddId;
 	
 	@Column(name="emp_current_address")
-	private String CurrentAddress;
+	private String currentAddress;
 	
 	@Column(name="emp_permanent_address")
-	private String PermanentAddress;
+	private String permanentAddress;
 	
-	@OneToOne(mappedBy = "empaddress", fetch = FetchType.LAZY)
+	@OneToOne(mappedBy = "empaddress")
 	@JsonBackReference
 	private Employee employee;
 	
-	@OneToOne(mappedBy = "emp_address",fetch = FetchType.LAZY)
-	@JsonBackReference
-	private EmployeeLocation  employeeLocation;
-
-	public EmployeeAddress(int empaddId, String currentAddress, String permanentAddress, Employee employee,
-			EmployeeLocation employeeLocation) {
-		super();
-		this.empaddId = empaddId;
-		CurrentAddress = currentAddress;
-		PermanentAddress = permanentAddress;
-		this.employee = employee;
-		this.employeeLocation = employeeLocation;
-	}
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "location_id")
+	@JsonBackReference("location-address")
+	private EmployeeLocation employeeLocation;
 
 	public int getEmpaddId() {
 		return empaddId;
@@ -50,19 +43,19 @@ public class EmployeeAddress {
 	}
 
 	public String getCurrentAddress() {
-		return CurrentAddress;
+		return currentAddress;
 	}
 
 	public void setCurrentAddress(String currentAddress) {
-		CurrentAddress = currentAddress;
+		this.currentAddress = currentAddress;
 	}
 
 	public String getPermanentAddress() {
-		return PermanentAddress;
+		return permanentAddress;
 	}
 
 	public void setPermanentAddress(String permanentAddress) {
-		PermanentAddress = permanentAddress;
+		this.permanentAddress = permanentAddress;
 	}
 
 	public Employee getEmployee() {
