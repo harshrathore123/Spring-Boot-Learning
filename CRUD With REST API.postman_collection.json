@@ -1,0 +1,159 @@
+{
+  "info": {
+    "_postman_id": "e8e66c0d-46da-4a6d-a37b-355c8b8e54dd",
+    "name": "CRUD With REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48515739"
+  },
+  "item": [
+    {
+      "name": "Get Request",
+      "item": [
+        {
+          "name": "GetById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8089/book/2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "book",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAllData",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/book",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "book"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Post Request",
+      "item": [
+        {
+          "name": "CreateRequest",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Javascript\",\r\n    \"price\":3200\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8089/book",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "book"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Delete Request",
+      "item": [
+        {
+          "name": "DeleteById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8089/book/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "book",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteAllData",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8089/book",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "book"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Update Request",
+      "item": [
+        {
+          "name": "UpdateData",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n        \"id\": 7,\r\n        \"name\": \"Mysql Fundamental\",\r\n        \"price\": 3200\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8089/book/7",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "book",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

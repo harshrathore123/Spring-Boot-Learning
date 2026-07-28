@@ -1,0 +1,160 @@
+{
+  "info": {
+    "_postman_id": "93fb7ed2-6d0e-4491-a053-0c7956b0f6ca",
+    "name": "Revision Rest API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48515739"
+  },
+  "item": [
+    {
+      "name": "GetAllEmployee",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8081/employee",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "employee"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "addEmployee",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"studentAge\": 25,\r\n  \"dob\": \"15-08-2000\",\r\n  \"empname\": {\r\n    \"firstName\": \"Harsh\",\r\n    \"lastName\": \"Rathore\"\r\n  },\r\n  \"empaddress\": {\r\n    \"currentAddress\": \"Vijay Nagar\",\r\n    \"permanentAddress\": \"Rajendra Nagar\",\r\n    \"employeeLocation\": {\r\n      \"empCity\": \"Indore\",\r\n      \"empState\": \"Madhya Pradesh\",\r\n      \"empPincode\": 452010\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/employee",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employee"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteEmployeeById",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"studentAge\": 25,\r\n  \"dob\": \"15-08-2000\",\r\n  \"empname\": {\r\n    \"firstName\": \"Harsh\",\r\n    \"lastName\": \"Rathore\"\r\n  },\r\n  \"empaddress\": {\r\n    \"currentAddress\": \"Vijay Nagar\",\r\n    \"permanentAddress\": \"Rajendra Nagar\",\r\n    \"employeeLocation\": {\r\n      \"empCity\": \"Indore\",\r\n      \"empState\": \"Madhya Pradesh\",\r\n      \"empPincode\": 452010\r\n    }\r\n  }\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/employee",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employee"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetEmployeeById",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"studentAge\": 25,\r\n  \"dob\": \"15-08-2000\",\r\n  \"empname\": {\r\n    \"firstName\": \"Harsh\",\r\n    \"lastName\": \"Rathore\"\r\n  },\r\n  \"empaddress\": {\r\n    \"currentAddress\": \"Vijay Nagar\",\r\n    \"permanentAddress\": \"Rajendra Nagar\",\r\n    \"employeeLocation\": {\r\n      \"empCity\": \"Indore\",\r\n      \"empState\": \"Madhya Pradesh\",\r\n      \"empPincode\": 452010\r\n    }\r\n  }\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/employee/4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employee",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateEmployeeById",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dob\": \"15-08-2000\",\r\n    \"empaddress\": {\r\n        \"currentAddress\": \"Nehru Nagar\",\r\n        \"empaddId\": 3,\r\n        \"permanentAddress\": \"Nanda Nagar\"\r\n    },\r\n    \"empname\": {\r\n        \"empnameId\": 3,\r\n        \"firstName\": \"Piyush\",\r\n        \"hibernateLazyInitializer\": {},\r\n        \"lastName\": \"Agrawal\"\r\n    },\r\n    \"id\": 4,\r\n    \"studentAge\": 25\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/employee/4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employee",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "uploadFile",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "871c5cd5-0edb-4ee4-9420-d2a033f82674",
+              "src": "/F:/Harsh Latest Photo Videos/WhatsApp Image 2026-04-01 at 8.10.00 PM.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/upload",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

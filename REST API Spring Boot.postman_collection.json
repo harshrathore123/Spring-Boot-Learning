@@ -1,0 +1,150 @@
+{
+  "info": {
+    "_postman_id": "5d26be2d-182d-4115-a4f6-1ce2c6edb390",
+    "name": "REST API Spring Boot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48515739"
+  },
+  "item": [
+    {
+      "name": "GetNormalData",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/book",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetDataById",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n        \"id\": 4,\r\n        \"name\": \"Mern Stack\",\r\n        \"price\": 3200\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/book",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PostData",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n        \"id\": 2,\r\n        \"name\": \"Javascript\",\r\n        \"price\": 322\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/book",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteById",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/book/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "book",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteAllBook",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/book",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateData",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"C++\",\r\n    \"price\": 321\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/book/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "book",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
