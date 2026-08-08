@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Conditional Thymeleaf</title>
+</head>
+<body>
+	<h1>Welcome to the Conditional Thymeleaf</h1>
+	<hr />
+
+	<!-- Elvis Operator ?: -->
+	<h2>This is Elvis Operator ?:</h2>
+	<p th:text="${age ?: 'Age not found'}"></p>
+	<p th:text="${name ?: 'Guest'}"></p>
+	<hr />
+
+	<!-- if Operator + Ladder if Operator -->
+	<h2>This is If Operator + Nested If Operator</h2>
+	<div th:if="${age > 10}">
+		<p th:if="${name=='Harsh'}">Name and Age both are correct</p>
+	</div>
+	<hr />
+
+	<!-- unless Operator + If-Unless Operator -->
+	<h2>This is unless Operator | If+unless Operator</h2>
+	<p th:unless="${age<=10}">Age is Smallest</p>
+
+	<p th:if="${age>=10}">Age is Greater</p>
+	<hr />
+
+	<!-- switch operator + Default Case -->
+	<h2>This is switch operator with default case</h2>
+	<div th:switch="${name}">
+
+		<p th:case="'Harsh'">Welcome Harsh!</p>
+
+		<p th:case="'Akash'">Welcome Akash</p>
+
+		<p th:case="'Rahul'">Welcome Rahul</p>
+
+		<p th:case="*">No Name</p>
+
+	</div>
+
+</body>
+</html>

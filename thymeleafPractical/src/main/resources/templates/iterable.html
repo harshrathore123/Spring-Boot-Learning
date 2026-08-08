@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf Interation</title>
+</head>
+<body>
+	<h1>Welcome to the Thymeleaf Iterable Part</h1>
+
+	<!-- Normal Text Print -->
+	<p th:text="${name}"></p>
+
+	<!-- Loop -->
+	<ul>
+		<h4>Full List</h4>
+		<li th:each="n : ${name}"><span th:text="${n}"></span></li>
+	</ul>
+	<hr>
+
+	<!-- Some Operation index -->
+	<ul>
+		<h4>List with Index</h4>
+		<li th:each="n,status : ${name}"><span
+			th:text="${status.index} + ' ' + ${n}"></span></li>
+	</ul>
+	<hr>
+
+	<!-- Some Operation even and odd -->
+	<ul>
+		<h4>List with Condition even and odd</h4>
+		<li th:each="n,status : ${name}"><span
+			th:style="${status.even} ? 'color:red' : 'color:green'"
+			th:text="${n}"></span></li>
+	</ul>
+	<hr>
+
+	<!-- Some Operation count -->
+	<ul>
+		<h4>List with Count Number</h4>
+		<li th:each="n,status : ${name}"><span
+			th:text="${n} + ' = ' + ${status.count}"></span></li>
+	</ul>
+	<hr>
+
+	<!-- Some Operation full -->
+	<ul>
+		<h4>List with full operation</h4>
+		<li th:each="n,index : ${name}"><span
+			th:text="${n} + '= ' + ${index}"></span></li>
+	</ul>
+
+</body>
+</html>

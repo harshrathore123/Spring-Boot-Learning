@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+
+	<!-- String Method -->
+    <h2 th:text="${#strings.toUpperCase(name)}"></h2>
+    
+    <!-- Using with -->
+    <div th:with="a=2, b=3, n=${name}">
+    	
+    	<!-- Getting value of a -->
+    	<h1>Value of a is: <span th:text="${a}"></span></h1>
+    	<h2>Value of b is: <span th:text="${b}"></span></h2>
+    	<h1 th:text="'Name is: '+${name}"></h1>
+    	
+    	<!-- Operation of Arithmetic -->
+    	<p th:text="'Sum of '+ ${a} + ' and '+ ${b} + ' is: '+${a+b}"></p>
+    </div>
+
+</body>
+
+</html>
