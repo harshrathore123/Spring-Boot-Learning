@@ -41,4 +41,18 @@ public class MyController {
 
 		return "conditional";
 	}
+	
+	//Dynamic values passed with fragment
+	@GetMapping("/service")
+	public String service(Model model) {
+		model.addAttribute("username", "Harsh Rathore");
+		System.out.println("Welcome to Service");
+		return "service";
+	}
+	
+	//Extract Inherit Main
+	@GetMapping("/contact")
+	public String contact() {
+		return "contact";
+	}
 }

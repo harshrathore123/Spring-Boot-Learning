@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(content)">
+
+<body>
+
+    <!-- Navbar -->
+    <navbar th:replace="~{fragment/navbar :: navbar}">
+    </navbar>
+
+    <!-- Content -->
+    <section th:replace="${content}">
+    </section>
+
+    <!-- Footer -->
+    <footer th:replace="~{fragment/footer :: footer(@{username})}">
+    </footer>
+
+</body>
+
+</html>
