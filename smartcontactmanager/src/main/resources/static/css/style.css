@@ -1,0 +1,249 @@
+body {
+	background: #e2e2e2 !important;
+}
+
+.bg-primary {
+	background: rgba(0, 0, 0, 0.20) !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999 !important;
+}
+
+.banner {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+		url(../img/contactgirl.png);
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+
+.banner h1 {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.banner-text {
+	max-width: 550px;
+	margin: 0 auto 25px;
+	line-height: 1.6;
+}
+
+.banner-content {
+	width: 50%;
+	margin-right: 5%;
+}
+
+.navbar a {
+	color: #d8cfc4 !important;
+	transition: 0.3s ease;
+}
+
+.navbar a:hover {
+	color: #ffffff !important;
+}
+
+/* Signup Section */
+.signup-section {
+	position: relative;
+	z-index: 1;
+	min-height: 100vh;
+	box-sizing: border-box;
+	padding: 90px 0 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+		url(../img/contactgirl.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Registration Form */
+.signup-container {
+	width: 420px;
+	padding: 30px 35px;
+	/* Transparent glass effect */
+	background: rgba(255, 255, 255, 0.12);
+	/* Glass blur */
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	/* Border */
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	border-radius: 12px;
+	/* Soft shadow */
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* Remove image completely */
+.signup-image {
+	display: none;
+}
+
+/* Heading */
+.signup-container h1 {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 500;
+	color: white;
+	margin-bottom: 25px;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Labels */
+.signup-container .form-label {
+	color: white;
+	font-size: 16px;
+	margin-bottom: 6px;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Inputs */
+.signup-container .form-control {
+	background: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	font-size: 16px;
+	padding: 10px 12px;
+	border-radius: 6px;
+}
+
+.signup-container .form-control:focus {
+	background: rgba(255, 255, 255, 0.95);
+	border-color: #0d9ba5;
+	box-shadow: 0 0 0 3px rgba(13, 155, 165, 0.25);
+}
+
+/* Textarea */
+.signup-container textarea {
+	resize: none;
+}
+
+/* Buttons */
+.signup-buttons {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.signup-buttons .btn {
+	font-size: 16px;
+	padding: 8px 20px;
+	margin: 0 3px;
+}
+
+/* Mobile */
+@media ( max-width : 576px) {
+	.signup-container {
+		width: 90%;
+		padding: 25px 20px;
+	}
+	.signup-container h1 {
+		font-size: 30px;
+	}
+}
+
+.terms-check {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.terms-check .form-check-input {
+	margin: 0;
+}
+
+.terms-check .form-check-label {
+	margin: 0;
+}
+
+/* ================================
+   UNIQUE VALIDATION MESSAGE
+================================ */
+
+.invalid-feedback {
+    display: flex !important;
+    align-items: center;
+    gap: 7px;
+
+    width: fit-content;
+
+    margin-top: 7px;
+    padding: 5px 11px;
+
+    color: #ffd6d6 !important;
+    font-size: 13px;
+    font-weight: 500;
+
+    background: rgba(255, 70, 70, 0.12);
+    border: 1px solid rgba(255, 120, 120, 0.35);
+    border-radius: 20px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow: 0 4px 15px rgba(255, 50, 50, 0.08);
+
+    animation: validationFade 0.25s ease-in-out;
+}
+
+/* Small warning icon */
+.invalid-feedback::before {
+    content: "!";
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 100, 100, 0.25);
+    border: 1px solid rgba(255, 150, 150, 0.5);
+
+    color: #ffdada;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Invalid input */
+.form-control.is-invalid {
+    border: 1px solid rgba(255, 120, 120, 0.65) !important;
+
+    background-image: none !important;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 80, 80, 0.08),
+        0 5px 20px rgba(255, 50, 50, 0.08) !important;
+}
+
+/* Input focus */
+.form-control.is-invalid:focus {
+    border-color: rgba(255, 150, 150, 0.9) !important;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 100, 100, 0.12),
+        0 8px 25px rgba(255, 50, 50, 0.10) !important;
+}
+
+/* Animation */
+@keyframes validationFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
