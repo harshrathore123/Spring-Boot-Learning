@@ -1,6 +1,7 @@
 package com.contact.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,6 +20,9 @@ import jakarta.validation.Valid;
 @Controller
 public class UserController {
 
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+	
 	@Autowired
 	private UserRepository userRepository;
 
@@ -60,10 +64,10 @@ public class UserController {
 		}
 
 		// 3. Set default values
-		user.setRole("User_Role");
+		user.setRole("ROLE_ADMIN");
 		user.setEnabled(true);
 		user.setImageUrl("default.png");
-
+		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		// 4. Save user
 
 			userRepository.save(user);
@@ -82,5 +86,11 @@ public class UserController {
 
 			return "signup";
 		}
+	}
+	
+	@GetMapping("/signin")
+	public String signin(Model model) {
+		model.addAttribute("title", "Login - Smart Contact Manager");	
+		return "login";
 	}
 }

@@ -247,3 +247,336 @@ body {
     }
 
 }
+
+/* ================================
+   LOGIN PAGE
+================================ */
+
+
+/* --------------------------------
+   LOGIN MESSAGE
+-------------------------------- */
+
+.login-message-area {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-alert {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 9px 12px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-align: center;
+
+    color: white !important;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    animation: validationFade 0.25s ease-in-out;
+}
+
+
+/* Error */
+.login-alert-error {
+    background: rgba(220, 53, 69, 0.25);
+
+    border: 1px solid rgba(255, 120, 120, 0.55);
+
+    box-shadow:
+        0 4px 15px rgba(255, 50, 50, 0.10);
+}
+
+
+/* Logout */
+.login-alert-success {
+    background: rgba(25, 135, 84, 0.25);
+
+    border: 1px solid rgba(100, 220, 160, 0.55);
+
+    box-shadow:
+        0 4px 15px rgba(25, 135, 84, 0.10);
+}
+
+
+/* --------------------------------
+   OR DIVIDER
+-------------------------------- */
+
+.login-divider {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin: 2px 0 20px;
+}
+
+
+/* Lines */
+.login-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+
+/* OR */
+.login-divider strong {
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin: 0 25px;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+/* --------------------------------
+   REMEMBER + REGISTER
+-------------------------------- */
+
+.login-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    margin: 0 auto 20px;
+}
+
+
+/* --------------------------------
+   REMEMBER ME
+-------------------------------- */
+
+.remember-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    flex: 1;
+    min-width: 0;
+}
+
+
+.remember-section .form-check-input {
+    width: 18px;
+    height: 18px;
+
+    margin: 0;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+
+.remember-section label {
+    color: white !important;
+
+    font-size: 16px;
+
+    margin: 0;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* --------------------------------
+   VERTICAL DIVIDER
+-------------------------------- */
+
+.login-vertical-divider {
+    width: 1px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    margin: 0 15px;
+}
+
+
+/* --------------------------------
+   REGISTER SECTION
+-------------------------------- */
+
+
+.register-section {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register-section a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: #16a9d8 !important;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    padding-bottom: 7px;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Register Icon */
+
+.register-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    color: white;
+
+    font-size: 17px;
+}
+
+
+/* Arrow */
+
+.register-arrow {
+    font-size: 23px;
+
+    line-height: 20px;
+
+    margin-left: 2px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Underline */
+
+.register-section a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.75);
+}
+
+
+/* Hover */
+
+.register-section a:hover {
+    color: white !important;
+
+    text-shadow:
+        0 0 8px rgba(22, 169, 216, 0.8);
+}
+
+.register-section a:hover .register-arrow {
+    transform: translateX(5px);
+}
+
+/* --------------------------------
+   SUBMIT BUTTON
+-------------------------------- */
+
+.login-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+
+.login-buttons .btn {
+
+    font-size: 16px;
+
+    padding: 8px 20px;
+
+    margin: 0 3px;
+
+    border-radius: 6px;
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 576px) {
+
+    .login-options {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .remember-section,
+    .register-section {
+
+        min-width: auto;
+    }
+
+
+    .login-vertical-divider {
+
+        display: none;
+    }
+
+
+    .login-divider strong {
+
+        margin: 0 15px;
+    }
+}
