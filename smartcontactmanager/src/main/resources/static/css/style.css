@@ -580,3 +580,879 @@ body {
         margin: 0 15px;
     }
 }
+
+/* =========================================
+   CUSTOMER DASHBOARD
+========================================= */
+
+.customer-dashboard {
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("../img/contactgirl.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+
+    padding-top: 70px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================
+   NAVBAR MOBILE TOGGLE
+========================================= */
+
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-menu-button {
+    display: none;
+}
+
+
+/* =========================================
+   MOBILE NAVBAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .customer-navbar {
+        height: 65px;
+    }
+
+    .customer-navbar .container-fluid {
+        position: relative;
+    }
+
+    .customer-navbar .navbar-brand {
+        font-size: 17px;
+    }
+
+    /* Navbar hamburger */
+
+    .navbar-menu-button {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        margin-left: auto;
+
+        color: white;
+
+        font-size: 25px;
+
+        cursor: pointer;
+
+        border-radius: 8px;
+
+        background: rgba(255,255,255,0.10);
+
+        border: 1px solid rgba(255,255,255,0.15);
+
+        transition: 0.3s ease;
+    }
+
+    .navbar-menu-button:hover {
+        background: rgba(255,255,255,0.18);
+    }
+
+
+    /* Hide navbar links initially */
+
+    .customer-navbar .navbar-collapse {
+
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 15px;
+
+        background: rgba(15,15,15,0.92);
+
+        backdrop-filter: blur(12px);
+
+        border-top: 1px solid rgba(255,255,255,0.10);
+    }
+
+
+    /* Open navbar */
+
+    .navbar-toggle:checked
+    ~ .navbar-collapse {
+
+        display: block;
+    }
+
+
+    .customer-navbar .navbar-nav {
+
+        flex-direction: column;
+
+        align-items: stretch !important;
+
+        gap: 5px;
+    }
+
+
+    .customer-navbar .nav-item {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .customer-user {
+
+        justify-content: center;
+
+        margin: 5px auto;
+    }
+
+}
+
+/* =========================================
+   CUSTOMER NAVBAR
+========================================= */
+
+.customer-navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.30) !important;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.customer-navbar .navbar-brand {
+
+    color: #d8cfc4 !important;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    text-decoration: none;
+
+    letter-spacing: 0.3px;
+
+    transition: 0.3s ease;
+}
+
+.customer-navbar .navbar-brand:hover {
+
+    color: #ffffff !important;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.customer-navbar .nav-link {
+
+    color: #d8cfc4 !important;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    padding: 8px 10px !important;
+
+    margin-left: 4px;
+
+    transition: all 0.3s ease;
+}
+
+.customer-navbar .nav-link:hover {
+
+    color: #ffffff !important;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================
+   USER NAME
+========================================= */
+
+.customer-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-left: 8px;
+    margin-right: 5px;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+
+/* User hover */
+
+.customer-user:hover {
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-color: rgba(255, 255, 255, 0.35);
+
+    transform: translateY(-1px);
+}
+
+
+/* Small user icon */
+
+.user-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 8px;
+    height: 8px;
+
+    font-size: 8px;
+
+    color: #7dd3fc;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.customer-navbar .logout-link {
+
+    margin-left: 3px;
+}
+
+
+/* =========================================
+   DASHBOARD CONTENT
+========================================= */
+
+.dashboard-content {
+
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   WELCOME CONTENT
+========================================= */
+
+.dashboard-welcome {
+
+    width: 600px;
+
+    padding: 35px 40px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 16px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Small welcome text */
+
+.welcome-small {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #b8c7d9;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+/* Heading */
+
+.dashboard-welcome h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+
+/* User name inside heading */
+
+.dashboard-welcome h1 span {
+
+    color: #7dd3fc;
+
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.dashboard-welcome p {
+
+    margin-top: 15px;
+
+    margin-bottom: 0;
+
+    color: #e0e0e0;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .customer-navbar {
+
+        height: auto;
+
+        min-height: 65px;
+    }
+
+    .customer-navbar .navbar-brand {
+
+        font-size: 17px;
+    }
+
+    .customer-navbar .navbar-nav {
+
+        padding: 10px 0;
+    }
+
+    .customer-user {
+
+        margin: 5px 0;
+    }
+
+    .dashboard-content {
+
+        padding-top: 100px;
+    }
+
+    .dashboard-welcome {
+
+        width: 90%;
+
+        padding: 30px 20px;
+    }
+
+    .dashboard-welcome h1 {
+
+        font-size: 32px;
+    }
+}
+
+/* =========================================================
+   CUSTOMER SIDEBAR
+========================================================= */
+
+.customer-sidebar {
+
+    position: fixed;
+
+    top: 70px;
+    left: 0;
+
+    width: 270px;
+    height: calc(100vh - 70px);
+
+    background: rgba(15, 15, 15, 0.82);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+
+    z-index: 9998;
+
+    padding: 25px 15px;
+
+    transition: all 0.35s ease;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   SIDEBAR HEADER
+========================================================= */
+
+.sidebar-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 5px 12px 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    margin-bottom: 15px;
+}
+
+.sidebar-title {
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* Close button */
+
+.sidebar-close {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: all 0.25s ease;
+}
+
+.sidebar-close:hover {
+
+    background: rgba(255, 255, 255, 0.12);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   SIDEBAR LINKS
+========================================================= */
+
+.sidebar-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.sidebar-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    color: rgba(255, 255, 255, 0.72) !important;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    border-radius: 9px;
+
+    transition: all 0.25s ease;
+}
+
+
+.sidebar-link:hover {
+
+    color: #ffffff !important;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    transform: translateX(4px);
+}
+
+
+/* Active */
+
+.sidebar-link.active {
+
+    color: #ffffff !important;
+
+    background: rgba(125, 211, 252, 0.14);
+
+    border-left: 3px solid #7dd3fc;
+}
+
+
+/* =========================================================
+   SIDEBAR ICON
+========================================================= */
+
+.sidebar-icon {
+
+    width: 22px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 18px;
+
+    color: #b8c7d9;
+
+    flex-shrink: 0;
+}
+
+
+.sidebar-link:hover .sidebar-icon {
+
+    color: #7dd3fc;
+}
+
+
+/* Logout */
+
+.sidebar-logout {
+
+    margin-top: 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    padding-top: 18px;
+
+    border-radius: 0 0 9px 9px;
+}
+
+.sidebar-logout:hover {
+
+    color: #ffb4b4 !important;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.customer-main-content {
+
+    margin-left: 270px;
+
+    padding-top: 70px;
+
+    min-height: 100vh;
+
+    transition: all 0.35s ease;
+}
+
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.sidebar-toggle {
+
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-sidebar-button {
+
+      display: none;
+
+    position: fixed;
+
+    top: 82px;
+    left: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 9997;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.mobile-sidebar-button:hover {
+
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+
+.sidebar-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9996;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .customer-sidebar {
+
+        width: 240px;
+    }
+
+    .customer-main-content {
+
+        margin-left: 240px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .customer-sidebar {
+
+        top: 0;
+
+        left: -280px;
+
+        width: 270px;
+
+        height: 100vh;
+
+        z-index: 10000;
+
+        padding-top: 25px;
+    }
+
+
+    .customer-main-content {
+
+        margin-left: 0;
+
+        padding-top: 70px;
+    }
+
+
+    .mobile-sidebar-button {
+
+        display: flex;
+    }
+
+
+    /* Sidebar open */
+
+    .sidebar-toggle:checked ~ .customer-sidebar {
+
+        left: 0;
+    }
+
+
+    /* Overlay visible */
+
+    .sidebar-toggle:checked ~ .sidebar-overlay {
+
+        display: block;
+    }
+
+
+    /* Keep button below sidebar */
+
+    .sidebar-toggle:checked ~ .mobile-sidebar-button {
+
+        z-index: 10001;
+
+        left: 225px;
+
+        background: rgba(255, 255, 255, 0.12);
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .customer-sidebar {
+
+        width: 250px;
+
+        left: -260px;
+    }
+
+
+    .sidebar-toggle:checked ~ .customer-sidebar {
+
+        left: 0;
+    }
+
+
+    .sidebar-toggle:checked ~ .mobile-sidebar-button {
+
+        left: 205px;
+    }
+
+}
