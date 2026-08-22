@@ -90,7 +90,7 @@ public class CustomerController {
 			System.out.println(contact);
 			System.out.println(contact.getNickName());
 			redirectAttribute.addFlashAttribute("message", new Message("Successfully Registered !!", "alert-success"));
-			return "redirect:/customer/customer_add_contact";
+			return "redirect:/customer/addContact";
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -99,7 +99,7 @@ public class CustomerController {
 			model.addAttribute("title", "Customer Add Contact - Smart Contact Manager");
 			redirectAttribute.addFlashAttribute("message",
 					new Message("Something went wrong !! " + e.getMessage(), "alert-danger"));
-			return "customer/customer_add_contact";
+			return "redirect:/customer/addContact";
 		}
 	}
 }

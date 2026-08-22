@@ -13,8 +13,12 @@
 			<div class="add-contact-card">
 
 				<div th:if="${message}" th:classappend="${message.type}"
-					class="alert">
-					<p th:text="${message.content}"></p>
+					class="alert"
+					style="width: 90%; margin: 0 auto 16px auto; padding: 14px 20px; border-radius: 6px; text-align: center; font-size: 15px; font-weight: 500; box-sizing: border-box;">
+
+					<p th:text="${message.content}" style="margin: 0; padding: 0;">
+					</p>
+
 				</div>
 
 				<!-- Header -->
@@ -131,16 +135,20 @@
 
 
 					<!-- About -->
+					<!-- About -->
+					<!-- About -->
 					<div class="contact-textarea-group">
 
 						<label>About this Contact</label>
 
 						<textarea name="description" rows="5"
-							th:value="${contact.description}"
+							th:text="${contact.description}"
 							placeholder="Write something about this contact..."></textarea>
 
-						<div class="invalid-feedback"
-							th:each="e: ${#fields.errors('description')}" th:text="${e}"></div>
+						<!-- Description Error -->
+						<div th:if="${#fields.hasErrors('description')}"
+							th:errors="*{description}"
+							class="contact-error description-error"></div>
 
 					</div>
 

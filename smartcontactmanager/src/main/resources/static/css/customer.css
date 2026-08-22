@@ -901,3 +901,72 @@
 	font-size: 10px;
 	font-weight: bold;
 }
+
+/* Validation Error - same for all fields */
+.field-error {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	margin-top: 7px;
+	padding: 6px 12px;
+	border: 1px solid rgba(255, 70, 70, 0.65);
+	border-radius: 18px;
+	background: rgba(120, 0, 0, 0.18);
+	color: #ffaaaa;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+/* Error icon */
+.field-error::before {
+	content: "!";
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #ff5555;
+	border-radius: 50%;
+	color: #ff7777;
+	font-size: 10px;
+	font-weight: bold;
+}
+/* ================================
+   VALIDATION ERROR
+================================ */
+.contact-error {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	margin-top: 8px;
+	padding: 7px 12px;
+	border: 1px solid rgba(255, 60, 60, 0.65);
+	border-radius: 18px;
+	background: rgba(120, 20, 20, 0.18);
+	color: #ffb0b0;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+/* Error icon */
+.contact-error::before {
+	content: "!";
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #ff4444;
+	border-radius: 50%;
+	color: #ff7777;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.description-error {
+	background: rgba(20, 15, 12, 0.75) !important;
+	border: 1px solid #b91c1c;
+	color: #ffb0b0;
+}
