@@ -102,4 +102,7 @@ public class CustomerController {
 			return "redirect:/customer/addContact";
 		}
 	}
+	
+	
+	//Now we are doing imageUpload part in different branch
 }
